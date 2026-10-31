@@ -43,22 +43,22 @@ const experienceData = {
             {
                 title: 'Ketua Pelaksana Prastudi',
                 desc: '<p class="text-gray-700 font-medium">Ketua Pelaksana Prastudi 2025</p><p class="text-gray-600 mt-2">Memimpin jalannya orientasi jurusan, memastikan seluruh rangkaian acara berjalan sesuai rencana, dan mengkoordinasikan seluruh panitia yang bertugas.</p>',
-                images: ['assets/dokumentasi_prastud.JPG', 'assets/dokumentasi_prastud2.JPG', 'assets/dokumentasi_prastud3.JPG', 'assets/dokumentasi_prastud4.JPG'] 
+                images: ['assets/dokumentasi_prastud.jpg', 'assets/dokumentasi_prastud2.jpg', 'assets/dokumentasi_prastud3.jpg', 'assets/dokumentasi_prastud4.jpg'] 
             },
             {
                 title: 'Koorlap Diklat HMTI',
                 desc: '<p class="text-gray-700 font-medium">Koordinator Lapangan Diklat Lapang Open Recruitment HMTI 2025</p><p class="text-gray-600 mt-2">Mengatur formasi, ketertiban peserta, dan menjaga alur mobilisasi selama proses diklat berlangsung.</p>',
-                images: ['assets/dokumentasi_oprec.JPG', 'assets/dokumentasi_oprec2.JPG', 'assets/dokumentasi_oprec3.JPG', 'assets/dokumentasi_oprec4.JPG'] 
+                images: ['assets/dokumentasi_oprec.jpg', 'assets/dokumentasi_oprec2.jpg', 'assets/dokumentasi_oprec3.jpg', 'assets/dokumentasi_oprec4.jpg'] 
             },
             {
                 title: 'Koorlap Sportif JTI',
                 desc: '<p class="text-gray-700 font-medium">Koordinator Lapangan Sportif JTI 2025</p><p class="text-gray-600 mt-2">Mengelola jalannya kompetisi olahraga tingkat jurusan dan memastikan keamanan di lapangan.</p>',
-                images: ['assets/test_sportif (1).JPG', 'assets/test_sportif (4).JPG', 'assets/test_sportif (5).JPG', 'assets/test_sportif (2).JPG']
+                images: ['assets/test_sportif (1).jpg', 'assets/test_sportif (4).jpg', 'assets/test_sportif (5).jpg', 'assets/test_sportif (2).jpg']
             },
             {
                 title: 'Sekretaris Pemilihan Ketum',
                 desc: '<p class="text-gray-700 font-medium">Sekretaris Pemilihan Ketua Umum 2026/2027</p><p class="text-gray-600 mt-2">Mengurus seluruh administrasi, pencatatan hasil, dan legalitas surat menyurat selama proses pemilihan.</p>',
-                images: ['assets/dokumentasi_pilketum (1).JPG', 'assets/dokumentasi_pilketum (2).JPG', 'assets/dokumentasi_pilketum (3).JPG', 'assets/dokumentasi_pilketum (4).JPG'] 
+                images: ['assets/dokumentasi_pilketum (1).jpg', 'assets/dokumentasi_pilketum (2).jpg', 'assets/dokumentasi_pilketum (3).jpg', 'assets/dokumentasi_pilketum (4).jpg'] 
             }
         ]
     },
@@ -74,7 +74,7 @@ const experienceData = {
             {
                 title: 'Waka Pelaksana Classmeet',
                 desc: '<p class="text-gray-700 font-medium">Wakil Ketua Pelaksana Class Meeting 2021</p><p class="text-gray-600 mt-2">Membantu ketua pelaksana dalam operasional kegiatan perlombaan antar kelas pasca-ujian semester.</p>',
-                images: ['assets/dokumentasi_cm (1).JPG', 'assets/dokumentasi_cm (2).jpg', 'assets/dokumentasi_cm (3).JPG', 'assets/dokumentasi_cm (4).JPG']
+                images: ['assets/dokumentasi_cm (1).jpg', 'assets/dokumentasi_cm (2).jpg', 'assets/dokumentasi_cm (3).jpg', 'assets/dokumentasi_cm (4).jpg']
             }
         ]
     }
