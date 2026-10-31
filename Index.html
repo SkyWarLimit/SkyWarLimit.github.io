@@ -1,1 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Muhammad Ihsan Rahmatullah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#7c3aed',
+                        brandLight: '#e9d5ff',
+                        brandDark: '#5b21b6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
 
+    <!-- NAVBAR -->
+    <nav class="bg-brand text-white py-4 px-8 md:px-20 flex justify-between items-center shadow-md sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <h1 class="text-2xl font-bold tracking-wider">My Portfolio</h1>
+        <ul class="hidden md:flex space-x-8 font-medium">
+            <li><a href="#" class="hover:text-brandLight transition">Home</a></li>
+            <li><a href="#about" class="hover:text-brandLight transition">About</a></li>
+            <li><a href="#experience" class="hover:text-brandLight transition">Experience</a></li>
+            <li><a href="#skills" class="hover:text-brandLight transition">Skills</a></li>
+            <li><a href="#projects" class="hover:text-brandLight transition text-yellow-300">Projects</a></li>
+            <li><a href="#contact" class="hover:text-brandLight transition">Contact</a></li>
+        </ul>
+        <div class="md:hidden cursor-pointer" id="mobile-menu-btn">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brandDark text-white px-8 py-4 space-y-3 shadow-lg fixed w-full z-40">
+        <a href="#" class="block hover:text-brandLight">Home</a>
+        <a href="#about" class="block hover:text-brandLight">About</a>
+        <a href="#experience" class="block hover:text-brandLight">Experience</a>
+        <a href="#skills" class="block hover:text-brandLight">Skills</a>
+        <a href="#projects" class="block hover:text-yellow-300">Projects</a>
+        <a href="#contact" class="block hover:text-brandLight">Contact</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg relative pt-20 pb-32 px-8 md:px-20 flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
+        <div class="md:w-1/2 mt-16 md:mt-0 z-10 animate-fade-up">
+            <p class="text-gray-500 font-semibold tracking-wide mb-2 uppercase text-sm">WELCOME TO MY WORLD</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                Hi, I'm <span class="text-brand">Ihsan Rahmatullah</span><br>
+                A Software & Mobile Developer
+            </h2>
+            <p class="text-gray-600 mb-8 max-w-md">Mahasiswa D4 Teknik Informatika Politeknik Negeri Malang yang berfokus pada pengembangan aplikasi Web & Mobile terintegrasi.</p>
+            <a href="https://wa.me/6281233888510" target="_blank" class="bg-brand text-white px-8 py-3 rounded-md font-semibold shadow-lg hover:bg-brandDark transition">CONTACT ME</a>
+        </div>
+
+        <div class="md:w-1/2 relative flex justify-center items-center mt-10 md:mt-0 h-96 animate-fade-up delay-200">
+            <div class="absolute bg-brandLight w-72 h-72 rounded-full opacity-50 -top-10 -right-10 z-0 blur-3xl floating-anim"></div>
+            
+            <div class="relative w-64 h-80 z-10">
+                <img src="assets/test.jpg" alt="Foto Ihsan" 
+                     class="w-full h-full object-cover rounded-xl shadow-2xl bg-gray-200" 
+                     onerror="this.src='https://via.placeholder.com/400x500.png?text=Foto+Utama'">
+                
+                <div class="absolute -top-4 -left-6 bg-white p-3 rounded-xl shadow-lg z-20 flex items-center justify-center border border-gray-100 floating-anim hover-scale">
+                    <i class="fa-brands fa-laravel text-red-500 text-3xl"></i>
+                </div>
+                <div class="absolute -bottom-4 -left-6 bg-white p-3 rounded-xl shadow-lg z-20 flex items-center justify-center border border-gray-100 floating-anim-delayed hover-scale">
+                    <img src="assets/flutter.png" alt="Flutter" class="w-8 h-8 object-contain">
+                </div>
+                <div class="absolute top-1/1 -right-8 bg-white p-3 rounded-xl shadow-lg z-20 flex items-center justify-center border border-gray-100 floating-anim delay-100 hover-scale">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="w-8 h-8 object-contain">
+                </div>
+                <div class="absolute bottom-1/3 -left-8 bg-white p-3 rounded-xl shadow-lg z-20 flex items-center justify-center border border-gray-100 floating-anim delay-300 hover-scale">
+                    <i class="fa-brands fa-html5 text-orange-500 text-3xl"></i>
+                </div>
+                <div class="absolute top-2/4 -right-4 bg-white p-3 rounded-xl shadow-lg z-20 flex items-center justify-center border border-gray-100 floating-anim-delayed hover-scale">
+                    <i class="fa-brands fa-python text-blue-600 text-3xl"></i>
+                </div>
+                <div class="absolute top-0 -right-2 bg-white p-3 rounded-xl shadow-lg z-20 flex items-center justify-center border border-gray-100 floating-anim delay-200 hover-scale">
+                    <i class="fa-brands fa-github text-gray-900 text-3xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-8 md:px-20 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="md:w-5/12 flex justify-center animate-fade-up">
+            <div class="profile-border hover-scale">
+                <img src="assets/foto_bulat.jpg" alt="Ihsan Bulat" 
+                     class="w-64 h-64 rounded-full object-cover bg-gray-300"
+                     onerror="this.src='https://via.placeholder.com/300.png?text=Foto+Bulat'">
+            </div>
+        </div>
+
+        <div class="md:w-7/12 animate-fade-up delay-200">
+            <h3 class="text-brand font-bold tracking-widest uppercase mb-2">ABOUT ME</h3>
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">I am a Software Developer Based in Malang</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+                Saya memiliki keahlian dalam perancangan dan pengembangan perangkat lunak. Saat ini aktif sebagai mahasiswa D4 Teknik Informatika dan memiliki pengalaman memimpin serta berorganisasi yang kuat di HMTI dan OSIS.
+            </p>
+            
+            <div class="space-y-3 mb-6 text-gray-800 font-medium">
+                <p><i class="fa-solid fa-graduation-cap w-6 text-brand"></i> <span class="font-bold">Education:</span> D4 Teknik Informatika, Politeknik Negeri Malang</p>
+                <p><i class="fa-solid fa-envelope w-6 text-brand"></i> <span class="font-bold">Email:</span> ihsanbinrahmatw@gmail.com</p>
+                <p><i class="fa-solid fa-phone w-6 text-brand"></i> <span class="font-bold">Phone:</span> +62 81233888510</p>
+                <p><i class="fa-solid fa-location-dot w-6 text-brand"></i> <span class="font-bold">Location:</span> Jl Progo No 2, Malang, Indonesia</p>
+            </div>
+
+            <!-- GitHub Stats API (Otomatis menyesuaikan profilmu) -->
+           <!-- GitHub Stats API (Menggunakan layanan alternatif yang stabil) -->
+            <div class="mb-8 flex flex-col sm:flex-row gap-4">
+                <a href="https://github.com/SkyWarLimit" target="_blank">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=SkyWarLimit&theme=transparent&hide_border=true&title_color=7c3aed&text_color=4b5563&icon_color=7c3aed" alt="Ihsan GitHub Streak" class="ml-[-15px] hover:scale-105 transition-transform duration-300 max-w-full">
+                </a>
+            </div>
+            
+
+            <a href="assets/CV-Muhammad-Ihsan-Rahmatullah.pdf" download class="bg-brand text-white px-6 py-3 rounded-md font-semibold shadow-md hover:bg-brandDark transition inline-flex items-center">
+                DOWNLOAD CV <i class="fa-solid fa-download ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="py-20 px-8 md:px-20 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-up">
+                <h3 class="text-brand font-bold tracking-widest uppercase mb-2">EXPERIENCE</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900">Riwayat Organisasi & Kepemimpinan</h2>
+            </div>
+
+            <div class="space-y-8">
+                <div onclick="openExperienceModal('hmti')" class="flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-gray-100 card-shadow bg-white animate-fade-up cursor-pointer hover:bg-gray-50 transition">
+                    <div class="md:w-1/4">
+                        <span class="inline-block px-3 py-1 bg-brandLight text-brand font-bold text-sm rounded-full mb-2">Feb 2025 - Jan 2026</span>
+                        <h4 class="font-bold text-gray-900">Organizing Committee</h4>
+                        <p class="text-sm text-gray-500">Malang</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-bold text-brand mb-2">Himpunan Mahasiswa Teknologi Informasi (HMTI) Polinema</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm md:text-base">
+                            <li>Ketua Pelaksana Prastudi 2025</li>
+                            <li>Koordinator Lapangan Diklat Lapang Open Recruitment HMTI 2025</li>
+                            <li>Koordinator Lapangan Sportif HMTI 2025</li>
+                            <li>Sekretaris Pemilihan Ketua Umum HMTI 2026/2027</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div onclick="openExperienceModal('osis')" class="flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-gray-100 card-shadow bg-white animate-fade-up cursor-pointer hover:bg-gray-50 transition">
+                    <div class="md:w-1/4">
+                        <span class="inline-block px-3 py-1 bg-brandLight text-brand font-bold text-sm rounded-full mb-2">Okt 2021 - Okt 2023</span>
+                        <h4 class="font-bold text-gray-900">Ketua Sekbid & Anggota</h4>
+                        <p class="text-sm text-gray-500">Malang</p>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-bold text-brand mb-2">OSIS/MPK SMA Negeri 9 Malang</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1 text-sm md:text-base">
+                            <li>Koordinator Kewirausahaan HEXA 2023</li>
+                            <li>Wakil Ketua Pelaksana Class Meeting 2021</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 px-8 md:px-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-up">
+                <h3 class="text-brand font-bold tracking-widest uppercase mb-2">MY SKILLS</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900">Keahlian & Teknologi</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div onclick="openSkillModal('webdev')" class="bg-white p-8 rounded-2xl text-center card-shadow border border-gray-100 animate-fade-up delay-100 cursor-pointer hover:bg-brandLight transition group">
+                    <div class="w-16 h-16 mx-auto bg-brandLight text-brand rounded-full flex items-center justify-center text-2xl mb-4 hover-rotate">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-900 mb-3">Web Development</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">PHP, Laravel, HTML, CSS, JavaScript, Tailwind CSS</p>
+                </div>
+
+                <div onclick="openSkillModal('mobiledev')" class="bg-white p-8 rounded-2xl text-center card-shadow border border-gray-100 animate-fade-up delay-200 cursor-pointer hover:bg-brandLight transition group">
+                    <div class="w-16 h-16 mx-auto bg-brandLight text-brand rounded-full flex items-center justify-center text-2xl mb-4 hover-rotate">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-900 mb-3">Mobile Dev</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Flutter, Dart</p>
+                </div>
+
+                <div onclick="openSkillModal('database')" class="bg-white p-8 rounded-2xl text-center card-shadow border border-gray-100 animate-fade-up delay-300 cursor-pointer hover:bg-brandLight transition group">
+                    <div class="w-16 h-16 mx-auto bg-brandLight text-brand rounded-full flex items-center justify-center text-2xl mb-4 hover-rotate">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-900 mb-3">Database & Tools</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">MySQL, PostgreSQL, Git, Figma, VS Code</p>
+                </div>
+
+                <div onclick="openSkillModal('general')" class="bg-white p-8 rounded-2xl text-center card-shadow border border-gray-100 animate-fade-up delay-400 cursor-pointer hover:bg-brandLight transition group">
+                    <div class="w-16 h-16 mx-auto bg-brandLight text-brand rounded-full flex items-center justify-center text-2xl mb-4 hover-rotate">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-900 mb-3">General Prog</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Python, Java</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (BARU) -->
+    <section id="projects" class="py-24 px-8 md:px-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 animate-fade-up">
+                <h3 class="text-brand font-bold tracking-widest uppercase mb-2">MY PROJECTS</h3>
+                <h2 class="text-3xl font-extrabold text-gray-900">Karya & Portofolio Utama</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: PELUANGKU -->
+                <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 animate-fade-up delay-100 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <!-- Pastikan path gambarmu sesuai -->
+                        <img src="assets/dokumentasi_projek_web (1).png" alt="PELUANGKU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-red-100 text-red-600 text-xs font-bold rounded-full">Laravel</span>
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-600 text-xs font-bold rounded-full">Tailwind CSS</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">PELUANGKU</h3>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow">Platform informasi lomba dan beasiswa berbasis web untuk memudahkan mahasiswa menemukan peluang akademik.</p>
+                        <div class="flex items-center gap-3 mt-auto">
+                            <a href="https://github.com/SkyWarLimit/PBL_NamelessGroup" target="_blank" class="flex-1 text-center py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-brand transition">
+                                <i class="fa-brands fa-github mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Sign L -->
+                <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 animate-fade-up delay-200 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden bg-gray-100">
+                        <!-- Object-contain untuk foto portrait mobile agar tidak terpotong -->
+                        <img src="assets/dokumentasi_projek_mobile (1).jpeg" alt="Sign L" class="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-sky-100 text-sky-600 text-xs font-bold rounded-full">Flutter</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-600 text-xs font-bold rounded-full">Dart</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">Sign L</h3>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow">Aplikasi mobile edukasi bahasa isyarat (BISINDO) dengan antarmuka yang mulus dan interaktif.</p>
+                        <div class="flex items-center gap-3 mt-auto">
+                            <a href="https://github.com/furalmiqbadi/PBL-S5-Sign.L" target="_blank" class="flex-1 text-center py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-brand transition">
+                                <i class="fa-brands fa-github mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Computer Vision AI -->
+                <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 animate-fade-up delay-300 flex flex-col group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="assets/cs (1).jpg" alt="Computer Vision" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-brand/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 text-xs font-bold rounded-full">OpenCV</span>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">Smart Vision AI</h3>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-bold ml-2 align-middle">In Progress</span>
+                        <p class="text-gray-600 text-sm mb-6 flex-grow">IProyek akhir Case Method (dalam tahap pengembangan) yang akan mengimplementasikan Computer Vision untuk klasifikasi citra sayuran secara akurat.</p>
+                        <div class="flex items-center gap-3 mt-auto">
+                            <a href="https://github.com/SkyWarLimit/PCVK26_17_MIhsanR" target="_blank" class="flex-1 text-center py-2 bg-gray-900 text-white rounded-lg text-sm font-semibold hover:bg-brand transition">
+                                <i class="fa-brands fa-github mr-1"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-gray-900 text-white py-12 text-center">
+        <h2 class="text-2xl font-bold mb-6 animate-fade-up">Let's Work Together!</h2>
+        <div class="flex justify-center space-x-6 mb-8 animate-fade-up delay-200">
+            <a href="https://github.com/SkyWarLimit" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand transition hover-scale">
+                <i class="fa-brands fa-github text-xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/muhammad-ihsan-rahmatullah" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand transition hover-scale">
+                <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="mailto:ihsanbinrahmatw@gmail.com" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand transition hover-scale">
+                <i class="fa-solid fa-envelope text-xl"></i>
+            </a>
+        </div>
+        <p class="text-gray-500 text-sm">© 2026 Muhammad Ihsan Rahmatullah.</p>
+    </footer>
+
+    <!-- ================= 1. MODAL EXPERIENCE ================= -->
+    <div id="experience-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity opacity-0 p-4 md:p-8">
+        <div id="exp-modal-content" class="bg-white rounded-2xl w-full md:w-4/5 lg:w-3/4 max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300 relative flex flex-col">
+            <button onclick="closeExperienceModal()" class="absolute top-4 right-4 bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center transition z-20 shadow-sm border border-gray-200">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="p-6 md:p-10 pt-12 md:pt-14">
+                <h3 id="exp-modal-title" class="text-2xl md:text-3xl font-extrabold text-brand mb-4 leading-tight"></h3>
+                <p id="exp-modal-subtitle" class="text-gray-600 mb-6 italic hidden"></p>
+                <div id="exp-role-tabs" class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 pb-4"></div>
+                <div id="exp-role-content-area" class="hidden">
+                    <div id="exp-modal-desc" class="text-gray-700 mb-8 leading-relaxed text-sm md:text-base prose max-w-none"></div>
+                    <div class="mt-8 mb-6 border-b border-gray-200 pb-2">
+                        <h4 class="font-bold text-gray-900 uppercase tracking-widest text-sm">DOKUMENTASI Acara</h4>
+                    </div>
+                    <div id="exp-modal-images" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pb-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= 2. MODAL SKILL ================= -->
+    <div id="skill-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm transition-opacity opacity-0 p-4 md:p-8">
+        <div id="skill-modal-content" class="bg-white rounded-2xl w-full md:w-3/4 lg:w-3/5 max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl transform scale-95 transition-transform duration-300 relative flex flex-col">
+            
+            <button onclick="closeSkillModal()" class="absolute top-4 right-4 bg-gray-100 hover:bg-red-100 hover:text-red-600 text-gray-700 rounded-full w-10 h-10 flex items-center justify-center transition z-20 shadow-sm border border-gray-200">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <div class="p-6 md:p-10 pt-12 text-center border-b border-gray-100">
+                <div id="skill-modal-icon" class="w-20 h-20 mx-auto bg-brandLight text-brand rounded-full flex items-center justify-center text-4xl mb-4 shadow-sm"></div>
+                <h3 id="skill-modal-title" class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2 leading-tight"></h3>
+                <div class="inline-block px-4 py-1.5 bg-gray-900 text-white rounded-full text-xs font-bold tracking-widest uppercase mb-4 shadow-sm" id="skill-modal-level"></div>
+                <div id="skill-modal-desc" class="text-gray-600 leading-relaxed text-sm md:text-base max-w-2xl mx-auto"></div>
+            </div>
+
+            <div class="p-6 md:p-10 bg-gray-50">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                    <h4 class="font-bold text-gray-900 uppercase tracking-widest text-sm mb-4 md:mb-0">DOKUMENTASI PROYEK</h4>
+                    <a href="#" id="skill-github-btn" target="_blank" class="inline-flex items-center px-5 py-2 bg-gray-800 text-white rounded-md text-sm font-semibold hover:bg-brand transition shadow-md">
+                        <i class="fa-brands fa-github text-lg mr-2"></i> Lihat di GitHub
+                    </a>
+                </div>
+
+                <div id="skill-modal-images" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

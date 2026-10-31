@@ -1,0 +1,130 @@
+/* Pengaturan Scroll Halus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background Hero Section dengan lengkungan */
+.hero-bg {
+    background: linear-gradient(to right, #f8faff, #f3f4ff);
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+}
+
+/* Efek Lingkaran Profil */
+.profile-border {
+    border: none;
+    border-radius: 50%;
+    padding: 8px; /* Jarak bingkai ke foto */
+    position: relative;
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Memberikan latar gradien yang berputar */
+    background: linear-gradient(135deg, #7c3aed, #c084fc, #7c3aed);
+    background-size: 200% 200%;
+    animation: gradientSpin 4s ease infinite;
+    z-index: 1;
+}
+
+/* Animasi putaran warna */
+@keyframes gradientSpin {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Lingkaran dalam sebagai pembatas antara bingkai dan foto */
+.profile-border::before {
+    content: "";
+    position: absolute;
+    top: 4px; left: 4px; right: 4px; bottom: 4px;
+    background-color: white; 
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Efek Bayangan Berpendar (Glow) di luar bingkai */
+.profile-border::after {
+    content: "";
+    position: absolute;
+    top: -4px; left: -4px; right: -4px; bottom: -4px;
+    background: inherit;
+    border-radius: 50%;
+    z-index: -2;
+    filter: blur(12px); /* Menghasilkan pendaran lembut */
+    opacity: 0.6;
+    animation: gradientSpin 4s ease infinite;
+}
+
+/* Efek Bayangan Kartu */
+.card-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+}
+
+/* Animasi Melayang (Floating) untuk Badge Laravel/Flutter */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-anim {
+    animation: float 4s ease-in-out infinite;
+}
+.floating-anim-delayed {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+/* Hover interaktif untuk Ikon */
+.hover-scale:hover {
+    transform: scale(1.1);
+}
+.hover-rotate:hover {
+    transform: rotate(15deg) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* =========================================
+   ANIMASI SCROLL (JavaScript Triggered)
+   ========================================= */
+
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+.animate-fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   ANIMASI KEDUA MODAL POP-UP
+   ========================================= */
+#experience-modal.is-open, 
+#skill-modal.is-open {
+    display: flex !important;
+    opacity: 1;
+}
+
+#experience-modal.is-open #exp-modal-content,
+#skill-modal.is-open #skill-modal-content {
+    transform: scale(1);
+}
+
+.cursor-pointer:hover h3 {
+    color: #7c3aed; 
+    transition: color 0.3s ease;
+}
